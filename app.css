@@ -2,7 +2,7 @@
 
 .git{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-  background-color: lightgray;
+  background-image:linear-gradient(to right, #b2ebf2, #e8505b);
   font-family: Arial;
   /* height: 100vh; */
 }
@@ -26,7 +26,7 @@
   right: 0;
   position: absolute;
 
-} 
+}
 
 .form-control{
   margin-left: auto;
@@ -59,6 +59,10 @@
   }
 }
 
+.background_Image{
+  background-image: url("background_Image.jpg");
+  background-size: cover;
+}
 td{
   font-size: 15px;
   color: white;
