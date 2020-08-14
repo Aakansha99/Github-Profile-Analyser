@@ -1,3 +1,7 @@
+ function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
 class finder
 {
     async fetchUsers(user,c,load)
