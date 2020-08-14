@@ -41,31 +41,31 @@ class finder
             table.innerHTML = `
                 <div id="class">
                 <tr>
-                    <td style="color:black";><b>Name :</b> ${data.name}</td>
+                    <td><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Location :</b> ${data.location} </td>
+                    <td><b>Location :</b> ${data.location} </td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Followers :</b> ${data.followers}</td>
+                    <td><b>Followers :</b> ${data.followers}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Following :</b> ${data.following}</td>
+                    <td><b>Following :</b> ${data.following}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Total Repositories :</b> ${data.public_repos}</td>
+                    <td><b>Total Repositories :</b> ${data.public_repos}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Total Stars :</b> ${stars}</td>
+                    <td><b>Total Stars :</b> ${stars}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
+                    <td;><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
                 </tr>
                 </div>
             `;
@@ -116,7 +116,7 @@ async function searchUser(searchText,id,search,clear){
             });
 
             const html = matches.slice(0,6).map(match => `<div class="autocomplete">
-            <p style="padding-top: 15px;color:black;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
+            <p style="padding-top: 15px;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
             </div>`).join('');
             matchList.innerHTML = html;
             matchList.addEventListener('click', (e) => {
