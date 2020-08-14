@@ -41,31 +41,31 @@ class finder
             table.innerHTML = `
                 <div id="class">
                 <tr>
-                    <td><b>Name :</b> ${data.name}</td>
+                    <td style="color:chocolate";><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Location :</b> ${data.location} </td>
+                    <td style="color:chocolate";><b>Location :</b> ${data.location} </td>
                 </tr>
 
                 <tr>
-                    <td><b>Followers :</b> ${data.followers}</td>
+                    <td style="color:chocolate";><b>Followers :</b> ${data.followers}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Following :</b> ${data.following}</td>
+                    <td style="color:chocolate";><b>Following :</b> ${data.following}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Total Repositories :</b> ${data.public_repos}</td>
+                    <td style="color:chocolate";><b>Total Repositories :</b> ${data.public_repos}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Total Stars :</b> ${stars}</td>
+                    <td style="color:chocolate";><b>Total Stars :</b> ${stars}</td>
                 </tr>
 
                 <tr>
-                    <td;><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
+                    <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
                 </tr>
                 </div>
             `;
