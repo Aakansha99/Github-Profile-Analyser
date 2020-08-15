@@ -1,7 +1,9 @@
-# Github-Profile-Analyser
+<h1 align= "center"><b>Github-Profile-Analyser</b></h1>
 
-
-## Contributor's Hack, 2020
+![Issues](https://img.shields.io/github/issues/Aakansha99/Github-Profile-Analyser)
+![Pull Requests](https://img.shields.io/github/issues-pr/Aakansha99/Github-Profile-Analyser?)
+![Forks](https://img.shields.io/github/forks/Aakansha99/Github-Profile-Analyser)
+![Stars](https://img.shields.io/github/stars/Aakansha99/Github-Profile-Analyser)
 
 
 ****About****
