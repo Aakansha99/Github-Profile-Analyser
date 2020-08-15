@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,3 +50,131 @@
     setInterval(smile, 4000);
     </script>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css"/>
+        <link rel="stylesheet" href="./app.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="https://www.riverbendhomestead.com.au/wp-content/uploads/2016/06/cropped-riverbend-homestead-favicon.png">
+        <title>
+            Home
+        </title>
+    </head>
+    
+    <body class="home">
+        <div>
+            <div class="topnav">
+                <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></i>
+                <a onclick="myFunction()"><b>THEME</b></a>
+                <a href="./gitfind.html"><b>Github Compare</b></a>
+                <a class="active" href="./index.html"><b>Home</b></a>
+            </div>
+
+            <div class="info">
+                <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
+                <h2><b>Github Finder</b></h2>
+                <a href="./gitfind.html"><h2><b>Github Profile Comparison</b></h2></a></br></br>
+                <h3>"First solve the problem<br/>
+                then write the code"</h3>
+            </br><div id="div1" class="fa"></div>
+            </div>
+        </div> 
+
+
+<!--Footer-->
+        <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+          
+              <!-- Grid row -->
+              <div class="row">
+          
+                <!-- Grid column -->
+                <div class="col-md-6  ">
+          
+                  <!-- Content -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4 " style="color:darkgray">Git-Hub Profile Analyser</h5>
+                  <p style="color:lavender">Git-Hub Profile Analyser is an application  that can analyze your GitHub profile, compare your profile 
+                    with some other profile and get a ready-made resume on the basis of your GitHub profile.</p>
+                </div>
+                <div class="col-md-6 ">
+                    <ul class="list-unstyled list-inline text-center py-2">
+                        <li class="list-inline-item">
+                          <h5 class="mb-1" style="color:grey">Register for free</h5>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+                        </li>
+                      </ul>
+                </div>
+          
+                
+            </div>
+        
+        </div>
+            <hr>
+          
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                    <i style="font-size:50px;color:black;" class="fa fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i style="font-size:50px;color:black;" class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="fb-ic">
+                    <i style="font-size:50px;color:black;" class="fa fa-github"></i>
+                </a>
+               </li>
+              
+              
+            </ul>
+            <!-- Social buttons -->
+          
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+              <a href="#">GitHub Profile Analyser</a>
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
+    <!-- Footer -->
+        
+        
+</body>
+
+
+<!--script-->
+
+<script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+    function smile() {
+      var a;
+      a = document.getElementById("div1");
+      a.innerHTML = "&#xf118;";
+      setTimeout(function () {
+          a.innerHTML = "&#xf11a;";
+        }, 1000);
+      setTimeout(function () {
+          a.innerHTML = "&#xf119;";
+        }, 2000);
+      setTimeout(function () {
+          a.innerHTML = "&#xf11a;";
+        }, 3000);
+    }
+    smile();
+    setInterval(smile, 4000);
+    </script>    
+</html>
+
