@@ -9,7 +9,6 @@ Fixes # [ISSUE]
 - Code
 - Quality Assurance
 - User Interface
-- Outreach
 - Documentation
 
 
