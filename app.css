@@ -114,15 +114,17 @@ td{
   margin-top: 60px;
 }
 
-.info b,h3{
+.info b,p{
   font-weight:600;
 }
 
 /* .info h3:hover{
   color:steelblue;
 } */
-.info h3 {
-  animation: color-change 2s infinite;
+
+.info p {
+  font-size: 20px;
+  animation: color-change 5s infinite;
 }
 
 @keyframes color-change {

@@ -23,8 +23,7 @@
                 <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
                 <h2><b>Github Finder</b></h2>
                 <a href="./gitfind.html"><h2><b>Github Profile Comparison</b></h2></a></br></br>
-                <h3>"First solve the problem<br/>
-                then write the code"</h3>
+                <p class = "text">"Think Twice, Code Once"</p>
             </br><div id="div1" class="fa"></div>
             </div>
         </div> 
@@ -122,5 +121,20 @@
     }
     smile();
     setInterval(smile, 4000);
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    let quote = document.querySelector(".text");
+
+    async function updateQuote() {
+        while(true){
+            await sleep(5000);
+            let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
+            let data = await obj.json();
+            quote.textContent = '"' + data['en'] + '"';
+        }
+    }
+    updateQuote();
     </script>    
 </html>
