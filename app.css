@@ -1,8 +1,16 @@
 /* Compare page */
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 .git{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-  background-color: lightgray;
   font-family: Arial;
   /* height: 100vh; */
 }
@@ -41,6 +49,11 @@
   border-radius: 15px;
 }
 
+#profile-pic{
+  height : 250px;
+  width : 250px;
+}
+
 @media only screen and (max-width: 500px) {
   .form-control{
     width: auto;
@@ -61,7 +74,6 @@
 
 td{
   font-size: 15px;
-  color: white;
   text-align: center;
 }
 
@@ -79,46 +91,45 @@ td{
 
 .topnav a {
   float: right;
-  color: lightslategray;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .topnav a:hover {
-  background-color: lightgray;
-  color: white;
+  color: lightgray;
 }
 
 .topnav a.active {
-  color: black;
+  color: steelblue;
 }
 
 /* Home page */
 
 .home{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-  background-color: lightgray;
-  font-family: Arial;
+    font-family: Arial;
   /* height: 100%; */
 }
 
 .info{
-  color: black;
   text-align: center;
   margin-top: 60px;
 }
 
-.info b,h3{
+.info b,p{
   font-weight:600;
 }
 
 /* .info h3:hover{
   color:steelblue;
 } */
-.info h3 {
-  animation: color-change 2s infinite;
+
+.info p {
+  font-size: 20px;
+  animation: color-change 5s infinite;
 }
 
 @keyframes color-change {
@@ -129,7 +140,6 @@ td{
 
 .footer{
   text-align: center;
-  color: black;
   margin-top: 141px;
 }
 
@@ -152,7 +162,6 @@ td{
   width: auto;
   text-align: center;
   margin-top: 8px;
-  color: white;
   box-shadow: 0px 1px 5px 1px #000;
   padding: 0.1rem;
 }

@@ -1,3 +1,33 @@
+ function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    function Grading(points)
+    {
+        if (points < 2)
+        {
+          Grade="A";      
+        } 
+        else if (points < 4) 
+        {
+                Grade="A+"; 
+        } 
+        else if (points < 6) 
+        {
+                Grade="A++"; 
+        } 
+        else if (points < 8) 
+        {
+                Grade="S" 
+        } 
+        else if (points < 10) 
+        {
+                Grade="S+";
+        }
+    return Grade;
+    }    
+
 class finder
 {
     async fetchUsers(user,c,load)
@@ -6,6 +36,7 @@ class finder
             document.getElementById(load).innerHTML = loader;
             const profile = await fetch(`https://api.github.com/users/${user}`)
             const data = await profile.json() ;
+            
             document.getElementById(load).innerHTML = "";
             if(data.message)
                 {
@@ -30,38 +61,50 @@ class finder
             const table = document.createElement('table');
             table.className="table border table-striped mt-5";
             let stars = 0
+            // defining user points on the scale of 10 //
+            var points=(((data.public_repos+stars)/2)/50)*10
+            var Grade = Grading(points)
+
             for( var i = 0;i<repos.length;i+=1)
                 {
                     stars += repos[i].watchers_count
                 }
-            table.innerHTML = `
+            
+        table.innerHTML = `
                 <div id="class">
+                <div class="user-image">
+                    <img src="${data.avatar_url}" alt="" id = "profile-pic">
+                </div>
                 <tr>
-                    <td style="color:black";><b>Name :</b> ${data.name}</td>
+                    <td style="color:chocolate";><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Location :</b> ${data.location} </td>
+                    <td style="color:chocolate";><b>Location :</b> ${data.location} </td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Followers :</b> ${data.followers}</td>
+                    <td style="color:chocolate";><b>Followers :</b> ${data.followers}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Following :</b> ${data.following}</td>
+                    <td style="color:chocolate";><b>Following :</b> ${data.following}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Total Repositories :</b> ${data.public_repos}</td>
+                    <td style="color:chocolate";><b>Total Repositories :</b> ${data.public_repos}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Total Stars :</b> ${stars}</td>
+                    <td style="color:chocolate";><b>Total Stars :</b> ${stars}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:black";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
+                    <td style="color:chocolate";><b>GitHub Grade :</b> ${Grade}</td>
+                </tr
+
+                <tr>
+                    <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
                 </tr>
                 </div>
             `;
@@ -112,7 +155,7 @@ async function searchUser(searchText,id,search,clear){
             });
 
             const html = matches.slice(0,6).map(match => `<div class="autocomplete">
-            <p style="padding-top: 15px;color:black;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
+            <p style="padding-top: 15px;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
             </div>`).join('');
             matchList.innerHTML = html;
             matchList.addEventListener('click', (e) => {
