@@ -72,6 +72,9 @@ class finder
             
         table.innerHTML = `
                 <div id="class">
+                <div class="user-image">
+                    <img src="${data.avatar_url}" alt="" id = "profile-pic">
+                </div>
                 <tr>
                     <td style="color:chocolate";><b>Name :</b> ${data.name}</td>
                 </tr>

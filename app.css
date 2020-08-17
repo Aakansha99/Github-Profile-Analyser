@@ -49,6 +49,11 @@ body {
   border-radius: 15px;
 }
 
+#profile-pic{
+  height : 250px;
+  width : 250px;
+}
+
 @media only screen and (max-width: 500px) {
   .form-control{
     width: auto;
