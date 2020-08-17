@@ -2,6 +2,32 @@
         var element = document.body;
         element.classList.toggle("dark-mode");
     }
+
+    function Grading(points)
+    {
+        if (points < 2)
+        {
+          Grade="A";      
+        } 
+        else if (points < 4) 
+        {
+                Grade="A+"; 
+        } 
+        else if (points < 6) 
+        {
+                Grade="A++"; 
+        } 
+        else if (points < 8) 
+        {
+                Grade="S" 
+        } 
+        else if (points < 10) 
+        {
+                Grade="S+";
+        }
+    return Grade;
+    }    
+
 class finder
 {
     async fetchUsers(user,c,load)
@@ -10,6 +36,7 @@ class finder
             document.getElementById(load).innerHTML = loader;
             const profile = await fetch(`https://api.github.com/users/${user}`)
             const data = await profile.json() ;
+            
             document.getElementById(load).innerHTML = "";
             if(data.message)
                 {
@@ -34,11 +61,16 @@ class finder
             const table = document.createElement('table');
             table.className="table border table-striped mt-5";
             let stars = 0
+            // defining user points on the scale of 10 //
+            var points=(((data.public_repos+stars)/2)/50)*10
+            var Grade = Grading(points)
+
             for( var i = 0;i<repos.length;i+=1)
                 {
                     stars += repos[i].watchers_count
                 }
-            table.innerHTML = `
+            
+        table.innerHTML = `
                 <div id="class">
                 <tr>
                     <td style="color:chocolate";><b>Name :</b> ${data.name}</td>
@@ -63,6 +95,10 @@ class finder
                 <tr>
                     <td style="color:chocolate";><b>Total Stars :</b> ${stars}</td>
                 </tr>
+
+                <tr>
+                    <td style="color:chocolate";><b>GitHub Grade :</b> ${Grade}</td>
+                </tr
 
                 <tr>
                     <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
