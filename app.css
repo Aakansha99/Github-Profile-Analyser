@@ -35,6 +35,10 @@ body {
   position: absolute;
 
 } 
+.centre{
+  position:fixed;
+  left: 25%;
+}
 
 .form-control{
   margin-left: auto;
