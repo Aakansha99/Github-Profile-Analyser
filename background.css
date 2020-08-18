@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Kaushan;
+    src: url(fonts/KaushanScript-Regular.otf);
+}
+
+/*****************************
+          LIGHT MODE
+*****************************/
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #80d6c2); */
+    background: linear-gradient(#ee7752, #e083a7, #26738f, #80d6c2);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change-bg 10s ease-in-out infinite;
+}
+
+
+@keyframes change-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.topnav a {
+    color: rgb(34, 53, 68);
+}
+
+.topnav a.active {
+    color: rgb(34, 53, 68);
+}
+
+
+div.info>a {
+    color: rgb(34, 53, 68);
+    font-family: Kaushan;
+    letter-spacing: 2px;
+    transition: 0.5s all;
+}
+
+div .info a:hover {
+    text-decoration: none;
+    color: rgb(226, 205, 205);
+}
+
+.info p {
+    font-size: 20px;
+    animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: rgb(34, 34, 117);
+    }
+
+    50% {
+        color: black;
+    }
+
+    100% {
+        color: rgb(34, 34, 117);
+    }
+}
+
+
+
+/*****************************
+          DARK MODE
+*****************************/
+.dark-mode {
+    /* background-color: black; */
+    background: linear-gradient(#000, rgb(18, 28, 48), rgb(20, 19, 19), rgb(128, 45, 128));
+    color: white;
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite all;
+}
+
+
+@keyframes change {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+        color: lightblue;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.dark-mode .topnav a {
+    color: steelblue;
+}
+
+.dark-mode .topnav a:hover {
+    color: lightblue;
+}
+
+.dark-mode .topnav a.active {
+    color: steelblue;
+}
+
+.dark-mode div.info a {
+    font-family: Kaushan;
+    letter-spacing: 2px;
+    color: steelblue;
+    transition: 0.5s all;
+}
+
+.dark-mode div .info a:hover {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.dark-mode .info p {
+    font-size: 20px;
+    animation: dark-color-change 5s infinite;
+}
+
+
+@keyframes dark-color-change {
+    0% {
+        color: rgb(133, 133, 177);
+    }
+
+    50% {
+        color: rgb(167, 160, 160);
+    }
+
+    100% {
+        color: rgb(133, 133, 177);
+    }
+}

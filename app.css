@@ -9,7 +9,8 @@ body {
   color: white;
 }
 
-.git{
+
+.git {
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
   font-family: Arial;
   /* height: 100vh; */
@@ -34,50 +35,52 @@ body {
   right: 0;
   position: absolute;
 
-} 
+}
 
-.form-control{
+.form-control {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
   border-radius: 15px;
 }
 
-.btn{
+.btn {
   width: 180px;
   margin: auto;
   border-radius: 15px;
 }
 
-#profile-pic{
-  height : 250px;
-  width : 250px;
+#profile-pic {
+  height: 250px;
+  width: 250px;
 }
 
 @media only screen and (max-width: 500px) {
-  .form-control{
+  .form-control {
     width: auto;
     border-radius: 15px;
   }
 
-  .btn{
+  .btn {
     width: auto;
     border-radius: 15px;
   }
-  .git{
+
+  .git {
     height: 100vh;
   }
-  .home{
+
+  .home {
     height: 100%;
   }
 }
 
-td{
+td {
   font-size: 15px;
   text-align: center;
 }
 
-.footer1{
+.footer1 {
   text-align: center;
   color: aliceblue;
   margin-top: 544px;
@@ -108,19 +111,20 @@ td{
 
 /* Home page */
 
-.home{
+.home {
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-    font-family: Arial;
+  font-family: Arial;
   /* height: 100%; */
 }
 
-.info{
+.info {
   text-align: center;
   margin-top: 60px;
 }
 
-.info b,p{
-  font-weight:600;
+.info b,
+p {
+  font-weight: 600;
 }
 
 /* .info h3:hover{
@@ -132,27 +136,69 @@ td{
   animation: color-change 5s infinite;
 }
 
+/* @keyframes color-change {
+  0% {
+    color: rgb(34, 34, 117);
+  }
+
+  50% {
+    color: black;
+  }
+
+  100% {
+    color: rgb(34, 34, 117);
+  }
+} */
+
+/* .dark-mode .info p {
+  font-size: 20px;
+  animation: dark-color-change 5s infinite;
+} */
+
 @keyframes color-change {
-  0% { color: steelblue; }
-  50% { color: black; }
-  100% { color: steelblue; }
+  0% {
+    color: steelblue;
+  }
+
+  50% {
+    color: black;
+  }
+
+  100% {
+    color: steelblue;
+  }
 }
 
-.footer{
+
+/* @keyframes dark-color-change {
+  0% {
+    color: rgb(133, 133, 177);
+  }
+
+  50% {
+    color: rgb(167, 160, 160);
+  }
+
+  100% {
+    color: rgb(133, 133, 177);
+  }
+} */
+
+.footer {
   text-align: center;
   margin-top: 141px;
 }
 
-.footer p{
-  font-weight:600
+.footer p {
+  font-weight: 600
 }
 
 #div1 {
-  font-size:48px;
-  font-weight:600;
+  font-size: 48px;
+  font-weight: 600;
 }
 
-#div1:hover{
+#div1:hover {
   color: steelblue;
 }
 
@@ -171,11 +217,11 @@ td{
   padding: 0.1rem;
 }
 
-#match-list{
+#match-list {
   overflow: hidden;
 }
 
-.img{
+.img {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -189,10 +235,12 @@ td{
   width: 80px;
   height: 80px;
 }
+
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
 }
+
 .lds-roller div:after {
   content: " ";
   display: block;
@@ -207,63 +255,80 @@ td{
 .lds-roller div:nth-child(1) {
   animation-delay: -0.036s;
 }
+
 .lds-roller div:nth-child(1):after {
   top: 63px;
   left: 63px;
 }
+
 .lds-roller div:nth-child(2) {
   animation-delay: -0.072s;
 }
+
 .lds-roller div:nth-child(2):after {
   top: 68px;
   left: 56px;
 }
+
 .lds-roller div:nth-child(3) {
   animation-delay: -0.108s;
 }
+
 .lds-roller div:nth-child(3):after {
   top: 71px;
   left: 48px;
 }
+
 .lds-roller div:nth-child(4) {
   animation-delay: -0.144s;
 }
+
 .lds-roller div:nth-child(4):after {
   top: 72px;
   left: 40px;
 }
+
 .lds-roller div:nth-child(5) {
   animation-delay: -0.18s;
 }
+
 .lds-roller div:nth-child(5):after {
   top: 71px;
   left: 32px;
 }
+
 .lds-roller div:nth-child(6) {
   animation-delay: -0.216s;
 }
+
 .lds-roller div:nth-child(6):after {
   top: 68px;
   left: 24px;
 }
+
 .lds-roller div:nth-child(7) {
   animation-delay: -0.252s;
 }
+
 .lds-roller div:nth-child(7):after {
   top: 63px;
   left: 17px;
 }
+
 .lds-roller div:nth-child(8) {
   animation-delay: -0.288s;
 }
+
 .lds-roller div:nth-child(8):after {
   top: 56px;
   left: 12px;
 }
+
 @keyframes lds-roller {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
