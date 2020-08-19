@@ -11,7 +11,7 @@ body {
 
 .git{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-  font-family: Arial;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* changed font*/
   /* height: 100vh; */
 }
 
@@ -87,19 +87,25 @@ td{
 
 .topnav {
   overflow: hidden;
+  display: block;    /*header styling*/
+  height: 65px;
+  box-shadow: 0px 7px 10px -7px black;
+  background-color: #E6E6E6;
+  color: black;
 }
 
 .topnav a {
   float: right;
   text-align: center;
-  padding: 14px 16px;
+  padding: 17px 15px;   /*header styling*/
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .topnav a:hover {
-  color: lightgray;
+  background-color: #fff;   /*header styling*/
+  transition: all 600ms ease-out;
 }
 
 .topnav a.active {
@@ -110,13 +116,14 @@ td{
 
 .home{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-    font-family: Arial;
+    font-family: "Comic Sans MS", cursive, sans-serif;  /* changed font*/
   /* height: 100%; */
 }
 
 .info{
   text-align: center;
   margin-top: 60px;
+  height: 100vh;  /* full view*/
 }
 
 .info b,p{
@@ -138,6 +145,29 @@ td{
   100% { color: steelblue; }
 }
 
+ /* animation on logo*/
+ .logo {
+  animation: transitionIn 900ms ease-in;
+}
+@keyframes transitionIn {
+  0%{
+    opacity: 0;
+    transform: scale(0.35);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+/* spacing */
+.text {
+  padding: 40px 0;
+}
+
+.gitpro {
+  padding: 40px 0;
+}
+
 .footer{
   text-align: center;
   margin-top: 141px;
@@ -150,10 +180,13 @@ td{
 #div1 {
   font-size:48px;
   font-weight:600;
+  transition: transform 2s ease-in; /* animation on smile */
+  transform: scale(1);
 }
 
 #div1:hover{
   color: steelblue;
+  transform: scale(3,2.5); /* animation on smile */
 }
 
 /* searchBar */
