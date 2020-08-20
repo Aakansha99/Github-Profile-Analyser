@@ -17,12 +17,13 @@ body {
 
 .split {
   height: 80vh;
-  width: 50%;
+  width: 45%;
   position: fixed;
   z-index: 1;
   /* top: 0; */
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 3vw;
 }
 
 .left {
@@ -49,9 +50,8 @@ body {
   border-radius: 15px;
 }
 
-#profile-pic{
-  height : 250px;
-  width : 250px;
+.class{
+  margin-right: 20px !important;
 }
 
 @media only screen and (max-width: 500px) {
@@ -119,17 +119,15 @@ td{
   margin-top: 60px;
 }
 
-.info b,p{
+.info b,h3{
   font-weight:600;
 }
 
 /* .info h3:hover{
   color:steelblue;
 } */
-
-.info p {
-  font-size: 20px;
-  animation: color-change 5s infinite;
+.info h3 {
+  animation: color-change 2s infinite;
 }
 
 @keyframes color-change {
@@ -260,6 +258,7 @@ td{
   top: 56px;
   left: 12px;
 }
+
 @keyframes lds-roller {
   0% {
     transform: rotate(0deg);
