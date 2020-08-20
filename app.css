@@ -1,12 +1,16 @@
 /* Compare page */
+
+
 body {
   background-color: white;
   color: black;
+  background-image: url("NormalTheme.jpeg"); /* Normal_Theme background */
 }
 
 .dark-mode {
   background-color: black;
   color: white;
+  background-image: url("Dark_Theme.jpg"); /*Dark_theme background */
 }
 
 .git{
@@ -35,7 +39,7 @@ body {
   right: 0;
   position: absolute;
 
-} 
+}
 
 .form-control{
   margin-left: auto;
