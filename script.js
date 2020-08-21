@@ -104,7 +104,7 @@ class finder
                 </tr
 
                 <tr>
-                    <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
+                    <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}" target="_blank">${data.html_url}</a></td> <!--added target="_blank"-->
                 </tr>
                 </div>
             `;

@@ -1,12 +1,16 @@
 /* Compare page */
+
+
 body {
   background-color: white;
   color: black;
+  background-image: url("NormalTheme.jpeg"); /* Normal_Theme background */
 }
 
 .dark-mode {
   background-color: black;
   color: white;
+  background-image: url("Dark_Theme.jpg"); /*Dark_theme background */
 }
 
 
@@ -18,12 +22,13 @@ body {
 
 .split {
   height: 80vh;
-  width: 50%;
+  width: 45%;
   position: fixed;
   z-index: 1;
   /* top: 0; */
   overflow-x: hidden;
   padding-top: 20px;
+  margin: 3vw;
 }
 
 .left {
@@ -122,6 +127,7 @@ td {
   margin-top: 60px;
 }
 
+
 .info b,
 p {
   font-weight: 600;
@@ -130,10 +136,8 @@ p {
 /* .info h3:hover{
   color:steelblue;
 } */
-
-.info p {
-  font-size: 20px;
-  animation: color-change 5s infinite;
+.info h3 {
+  animation: color-change 2s infinite;
 }
 
 /* @keyframes color-change {
