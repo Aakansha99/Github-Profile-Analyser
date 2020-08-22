@@ -4,13 +4,13 @@
 body {
   background-color: white;
   color: black;
-  background-image: url("NormalTheme.jpeg"); /* Normal_Theme background */
+  background: linear-gradient(120deg, #F09819, #EDDE5D); /* Normal_Theme background */
 }
 
 .dark-mode {
   background-color: black;
   color: white;
-  background-image: url("Dark_Theme.jpg"); /*Dark_theme background */
+  background: linear-gradient(120deg, #2c2c2e, #131210); /*Dark_theme background */
 }
 
 .git{
