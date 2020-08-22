@@ -271,3 +271,11 @@ td{
     transform: rotate(360deg);
   }
 }
+
+.col-md-6{
+  display: block;
+  widows: 100%;
+  height: auto;
+  
+
+}
