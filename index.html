@@ -11,6 +11,10 @@
     </head>
     
     <body class="home">
+      <div class="loader">
+        <img src="splash.gif" />
+      </div>
+        <div>
         <div>
             <div class="topnav">
                 <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></i>
@@ -95,7 +99,13 @@
           
           </footer>
     <!-- Footer -->
-        
+        <script type="text/javascript">
+          window.addEventListener("load", function(){
+          const loader = document.querySelector(".loader");
+          loader.className += " hidden";
+});
+
+        </script>
         
 </body>
 
