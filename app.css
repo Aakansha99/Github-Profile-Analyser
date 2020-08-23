@@ -39,6 +39,10 @@ body {
   right: 0;
   position: absolute;
 
+} 
+.centre{
+  position:fixed;
+  left: 25%;
 }
 
 .form-control{
