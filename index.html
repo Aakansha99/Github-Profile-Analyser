@@ -23,6 +23,10 @@
     </head>
     
     <body class="home">
+      <div class="loader">
+        <img src="splash.gif" />
+      </div>
+        <div>
         <div>
             <div class="topnav">
                 <div id="logo">
@@ -30,12 +34,20 @@
                 </div>
                 <a onclick="myFunction()"><b>THEME</b></a>
                 <a href="./gitfind.html"><b>Github Compare</b></a>
+                <a class="active" href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
                 <a class="active" href="./index.html"><b>Home</b></a>
             </div>
             <br>
             <div class="info">
+
                 <a href="./index.html"><h2 style="color:brown;"><b>COMPETITORS HUB</b></h2></a>
                 <a href="./gitfind.html"><h2><b>Compare and Compete</b></h2></a></br></br>
+
+                <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
+                <h2><b>Github Finder</b></h2>
+                <a href="./gitfind.html"><h2><b>Github Profile Comparison</b></h2></a></br></br>
+                <a href="./analyseProfile.html"><h2><b>Analyse a Profile</b></h2></a></br></br>
+
                 <p class = "text">"Think Twice, Code Once"</p>
             </br><div id="div1" class="fa"></div>
             </div>
@@ -109,7 +121,13 @@
            
           </footer>
     <!-- Footer -->
-        
+        <script type="text/javascript">
+          window.addEventListener("load", function(){
+          const loader = document.querySelector(".loader");
+          loader.className += " hidden";
+});
+
+        </script>
         
 </body>
 
