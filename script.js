@@ -1,5 +1,6 @@
  function myFunction() {
         var element = document.body;
+        document.querySelector(".mode").innerHTML = "Light Mode";
         element.classList.toggle("dark-mode");
     }
 
