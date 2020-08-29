@@ -32,7 +32,7 @@
                 <div id="logo">
                     <a href="./index.html"><img src="LOGO.png" class="image" alt=""></a>
                 </div>
-                <a onclick="myFunction()"><b>THEME</b></a>
+                <a onclick="myFunction()" class="mode"><b>Dark Mode</b></a>
                 <a href="./gitfind.html"><b>Github Compare</b></a>
                 <a class="active" href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
                 <a class="active" href="./index.html"><b>Home</b></a>
@@ -137,6 +137,7 @@
 <script>
     function myFunction() {
         var element = document.body;
+        document.querySelector(".mode").innerHTML = "Light Mode";
         element.classList.toggle("dark-mode");
     }
     function smile() {
