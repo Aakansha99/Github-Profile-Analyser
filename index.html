@@ -8,6 +8,7 @@
         <title>
             Home
         </title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     </head>
     
     <body class="home">
@@ -18,7 +19,7 @@
         <div>
             <div class="topnav">
                 <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></i>
-                <a onclick="myFunction()"><b>THEME</b></a>
+                <strong id="themeToggle"><a onclick="themeToggler()">THEME</a></strong>
                 <a href="./gitfind.html"><b>Github Compare</b></a>
                 <a class="active" href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
                 <a class="active" href="./index.html"><b>Home</b></a>
@@ -27,15 +28,15 @@
             <div class="info">
                 <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
                 <h2><b>Github Finder</b></h2>
-                <a href="./gitfind.html"><h2><b>Github Profile Comparison</b></h2></a></br></br>
-                <a href="./analyseProfile.html"><h2><b>Analyse a Profile</b></h2></a></br></br>
+                <a href="./gitfind.html"><h2><b class="btn btn-outline-info px-2">Github Profile Comparison</b></h2></a></br></br>
+                <a href="./analyseProfile.html"><h2><b class="btn btn-outline-info px-2">Analyse a Profile</b></h2></a></br></br>
                 <p class = "text">"Think Twice, Code Once"</p>
             </br><div id="div1" class="fa"></div>
             </div>
         </div> 
 
 
-<!--Footer-->
+        <!-- Footer -->
         <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer">
 
             <!-- Footer Links -->
@@ -73,17 +74,17 @@
             <ul class="list-unstyled list-inline text-center">
               <li class="list-inline-item">
                 <a class="btn-floating btn-fb mx-1">
-                    <i style="font-size:50px;color:black;" class="fa fa-facebook-f"></i>
+                    <i class="fa fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="btn-floating btn-tw mx-1">
-                    <i style="font-size:50px;color:black;" class="fa fa-twitter"></i>
+                    <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="fb-ic">
-                    <i style="font-size:50px;color:black;" class="fa fa-github"></i>
+                    <i class="fa fa-github"></i>
                 </a>
                </li>
               
@@ -98,24 +99,32 @@
             <!-- Copyright -->
           
           </footer>
-    <!-- Footer -->
+        <!-- Footer -->
         <script type="text/javascript">
           window.addEventListener("load", function(){
           const loader = document.querySelector(".loader");
           loader.className += " hidden";
-});
+          });
 
         </script>
         
-</body>
+    </body>
 
 
-<!--script-->
+  <!-- Page Script -->
 
-<script>
-    function myFunction() {
+  <script>
+    function themeToggler() {
         var element = document.body;
+        let themeToggle = document.querySelector("#themeToggle a");
         element.classList.toggle("dark-mode");
+        // Setting up theme name to "Light Theme" or "Dark Theme" in the #themeToggle button
+        if (themeToggle.innerText.toUpperCase().startsWith("DARK")) {
+          themeToggle.innerText = "LIGHT THEME";
+        }
+        else {
+          themeToggle.innerText = "Dark Theme".toUpperCase();
+        }
     }
     function smile() {
       var a;
@@ -148,5 +157,5 @@
         }
     }
     updateQuote();
-    </script>    
+  </script>    
 </html>

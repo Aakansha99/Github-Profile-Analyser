@@ -4,10 +4,10 @@
 body {
   background-color: white;
   color: black;
-  background-image: url("NormalTheme.jpeg"); /* Normal_Theme background */
+  background-image: linear-gradient(45deg, #aaa3, #fff4), url("NormalTheme.jpeg"); /* Normal_Theme background */
 }
 
-.dark-mode {
+body.dark-mode {
   background-color: black;
   color: white;
   background-image: url("Dark_Theme.jpg"); /*Dark_theme background */
@@ -141,7 +141,11 @@ td{
   color: lightgray;
 }
 
-.topnav a.active {
+.topnav #themeToggle:hover a {
+  background-color: #4682b4;
+}
+
+.topnav a:active {
   color: steelblue;
 }
 
@@ -149,7 +153,11 @@ td{
 
 .home{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
-    font-family: Arial;
+  background-image: linear-gradient(45deg, #aaa2, #fff4), url(./coffee-apple.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial;
   /* height: 100%; */
 }
 
@@ -167,6 +175,11 @@ td{
 } */
 .info h3 {
   animation: color-change 2s infinite;
+}
+
+b.btn.btn-outline-info {
+  width: auto;
+  width: fit-content;
 }
 
 @keyframes color-change {
@@ -218,7 +231,7 @@ td{
   border-radius: 5px;
 }
 
-/* loader */
+/* Loader Animation */
 
 .lds-roller {
   display: inline-block;
@@ -238,6 +251,7 @@ td{
   height: 7px;
   border-radius: 50%;
   background: black;
+  background: currentColor;
   margin: -4px 0 0 -4px;
 }
 
@@ -305,4 +319,14 @@ td{
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Styling the social icons at footer */
+footer i.fa {
+  font-size:50px;
+  color:black;
+}
+
+footer i.fa:hover {
+  color:gray;
 }
