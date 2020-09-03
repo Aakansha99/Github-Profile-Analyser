@@ -5,9 +5,10 @@
         <link rel="stylesheet" href="./app.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="https://www.riverbendhomestead.com.au/wp-content/uploads/2016/06/cropped-riverbend-homestead-favicon.png">
+        <link rel="stylesheet" href="background.css">
         <title>
             Home
-        </title>
+        </title>        
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     </head>
     
@@ -146,16 +147,38 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    let quote = document.querySelector(".text");
+  function smile() {
+    var a;
+    a = document.getElementById("div1");
+    a.innerHTML = "&#xf118;";
+    setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+  }
+  smile();
+  setInterval(smile, 4000);
 
-    async function updateQuote() {
-        while(true){
-            await sleep(5000);
-            let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
-            let data = await obj.json();
-            quote.textContent = '"' + data['en'] + '"';
-        }
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  let quote = document.querySelector(".text");
+
+  async function updateQuote() {
+    while (true) {
+      await sleep(5000);
+      let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
+      let data = await obj.json();
+      quote.textContent = '"' + data['en'] + '"';
     }
-    updateQuote();
-  </script>    
+  }
+  updateQuote();
+</script>
+
 </html>
