@@ -8,6 +8,7 @@
         <title>
             Home
         </title>
+        <link rel="stylesheet" href="background.css">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     </head>
     
@@ -21,13 +22,13 @@
                 <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></i>
                 <strong id="themeToggle"><a onclick="themeToggler()">THEME</a></strong>
                 <a href="./gitfind.html"><b>Github Compare</b></a>
-                <a class="active" href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
+                <a href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
                 <a class="active" href="./index.html"><b>Home</b></a>
             </div>
 
             <div class="info">
                 <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
-                <h2><b>Github Finder</b></h2>
+                <h2><b>Github Finder</b></h2><br>
                 <a href="./gitfind.html"><h2><b class="btn btn-outline-info px-2">Github Profile Comparison</b></h2></a></br></br>
                 <a href="./analyseProfile.html"><h2><b class="btn btn-outline-info px-2">Analyse a Profile</b></h2></a></br></br>
                 <p class = "text">"Think Twice, Code Once"</p>
@@ -37,7 +38,7 @@
 
 
         <!-- Footer -->
-        <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer">
+        <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer" style="margin-top:4em;">
 
             <!-- Footer Links -->
             <div class="container text-center text-md-left">
@@ -126,36 +127,38 @@
           themeToggle.innerText = "Dark Theme".toUpperCase();
         }
     }
-    function smile() {
-      var a;
-      a = document.getElementById("div1");
-      a.innerHTML = "&#xf118;";
-      setTimeout(function () {
-          a.innerHTML = "&#xf11a;";
-        }, 1000);
-      setTimeout(function () {
-          a.innerHTML = "&#xf119;";
-        }, 2000);
-      setTimeout(function () {
-          a.innerHTML = "&#xf11a;";
-        }, 3000);
-    }
-    smile();
-    setInterval(smile, 4000);
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
 
-    let quote = document.querySelector(".text");
+  function smile() {
+    var a;
+    a = document.getElementById("div1");
+    a.innerHTML = "&#xf118;";
+    setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+  }
+  smile();
+  setInterval(smile, 4000);
 
-    async function updateQuote() {
-        while(true){
-            await sleep(5000);
-            let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
-            let data = await obj.json();
-            quote.textContent = '"' + data['en'] + '"';
-        }
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  let quote = document.querySelector(".text");
+
+  async function updateQuote() {
+    while (true) {
+      await sleep(5000);
+      let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
+      let data = await obj.json();
+      quote.textContent = '"' + data['en'] + '"';
     }
     updateQuote();
+  }
   </script>    
 </html>
