@@ -144,7 +144,9 @@ td{
 .topnav a.active {
   color: steelblue;
 }
-
+.topnav a.active :hover{
+  color: palevioletred;
+}
 /* Home page */
 
 .home{
