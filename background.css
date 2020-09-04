@@ -3,6 +3,7 @@
   src: url(fonts/KaushanScript-Regular.otf);
 }
 
+/* Background boxes */
 .box div {
   height: 60px;
   width: 60px;
@@ -71,6 +72,7 @@
     transform: scale(1.6) translateY(-250px) rotate(360deg);
   }
 }
+/* Background boxes */
 
 /*****************************
           LIGHT MODE
