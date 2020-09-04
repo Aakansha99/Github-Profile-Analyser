@@ -1,0 +1,243 @@
+@font-face {
+  font-family: Kaushan;
+  src: url(fonts/KaushanScript-Regular.otf);
+}
+
+/* Background boxes */
+.box div {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: animate 4s linear infinite;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+.box div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.box div:nth-child(2) {
+  top: 26%;
+  left: 89%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 80%;
+  left: 90%;
+  animation: animate 5s linear infinite;
+}
+.box div:nth-child(4) {
+  top: 65%;
+  left: 75%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+.box div:nth-child(7) {
+  top: 70%;
+  left: 33%;
+  animation: animate 8s linear infinite;
+}
+.box div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(9) {
+  top: 23%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+.box div:nth-child(10) {
+  top: 35%;
+  left: 7%;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(50deg);
+  }
+  100% {
+    transform: scale(1.6) translateY(-250px) rotate(360deg);
+  }
+}
+/* Background boxes */
+
+/*****************************
+          LIGHT MODE
+*****************************/
+
+body {
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(#ee7752, #e083a7, #26738f, #80d6c2); */
+  background: linear-gradient(
+    #9ba1db,
+    rgba(166, 175, 175, 0.541),
+    #26738f,
+    #80d6c2
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: change-bg 10s ease-in-out infinite;
+}
+
+@keyframes change-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navigation bar */
+.topnav a {
+  color: rgb(34, 53, 68);
+}
+
+.topnav a.active {
+  color: rgb(34, 53, 68);
+}
+
+/* Navigation bar end */
+
+/* GitHub profile comparison section */
+div.info > a {
+  display: inline-block;
+  color: rgb(34, 53, 68);
+  font-family: Kaushan;
+  letter-spacing: 2px;
+  transition: 0.5s all;
+}
+
+div .info a:hover {
+  text-decoration: none;
+  color: rgb(226, 205, 205);
+}
+
+/* GitHub profile comparison section */
+
+/* Changing text */
+.info p {
+  font-size: 20px;
+  padding: 30px 25px 5px 25px;
+  height: 120px;
+  /* border: 1px solid black; */
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(34, 34, 117);
+  }
+
+  50% {
+    color: black;
+  }
+
+  100% {
+    color: rgb(34, 34, 117);
+  }
+}
+
+/* Changing text end */
+
+/*****************************
+          DARK MODE
+*****************************/
+.dark-mode {
+  background: linear-gradient(
+    #000,
+    rgb(18, 28, 48),
+    rgb(20, 19, 19),
+    rgb(128, 45, 128)
+  );
+  color: white;
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite all;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+    color: lightblue;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navigation bar */
+.dark-mode .topnav a {
+  color: steelblue;
+}
+
+.dark-mode .topnav a:hover {
+  color: lightblue;
+}
+
+.dark-mode .topnav a.active {
+  color: steelblue;
+}
+
+/* Navigation bar end */
+
+/* GitHub profile comparison section */
+.dark-mode div.info a {
+  display: inline-block;
+  font-family: Kaushan;
+  letter-spacing: 2px;
+  color: steelblue;
+  transition: 0.5s all;
+}
+
+.dark-mode div .info a:hover {
+  text-decoration: none;
+  color: lightblue;
+}
+
+/* GitHub profile comparison section end */
+
+/* Changing text */
+.dark-mode .info p {
+  font-size: 20px;
+  animation: dark-color-change 5s infinite;
+}
+
+@keyframes dark-color-change {
+  0% {
+    color: rgb(133, 133, 177);
+  }
+
+  50% {
+    color: rgb(167, 160, 160);
+  }
+
+  100% {
+    color: rgb(133, 133, 177);
+  }
+}
+
+/* Changing text end */
