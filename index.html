@@ -1,6 +1,121 @@
 <!DOCTYPE html>
 <html>
 
+    <head>
+        <link rel="icon" type="image/png" href="FAVICON.png"/>
+        <link rel="stylesheet" href="bootstrap.min.css"/>
+        <link rel="stylesheet" href="./app.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="https://www.riverbendhomestead.com.au/wp-content/uploads/2016/06/cropped-riverbend-homestead-favicon.png">
+        <title>
+            Home
+        </title>
+        <style>
+            #logo{ 
+                    position:fixed; 
+                    top:0; 
+                    left:0; 
+                } 
+            .text{
+                width:100%;
+                height:50px;
+            }
+        </style>
+    </head>
+    
+    <body class="home">
+      <div class="loader">
+        <img src="splash.gif" />
+      </div>
+        <div>
+        <div>
+            <div class="topnav">
+                <div id="logo">
+                    <a href="./index.html"><img src="LOGO.png" class="image" alt=""></a>
+                </div>
+                <a onclick="myFunction()" class="mode"><b>Dark Mode</b></a>
+                <a href="./gitfind.html"><b>Github Compare</b></a>
+                <a class="active" href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
+                <a class="active" href="./index.html"><b>Home</b></a>
+            </div>
+          
+            <div class="info">
+                <img src="FAVICON.png" width="100px" height="100px"/>
+                <h2 style="color:#cc0000;"><b>COMPETITORS HUB</b></h2>
+                <p class = "text">"Think Twice, Code Once"</p>
+            </br><div id="div1" class="fa"></div>
+            </div>
+        </div> 
+
+
+<br>
+<br>
+<br>
+<br>
+<!--Footer-->
+        <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+          
+              <!-- Grid row -->
+              <div class="row">
+          
+                <!-- Grid column -->
+                <div class="col-md-6  ">
+          
+                  <!-- Content -->
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4 " style="color:darkgray">Competitors Hub</h5>
+                  <p style="color:lavender">Competitors Hub is an application  that can analyze your GitHub profile, compare your profile 
+                    with some other profile and get a ready-made resume on the basis of your GitHub profile.</p>
+                </div>
+                <div class="col-md-6 ">
+                    <ul class="list-unstyled list-inline text-center py-2">
+                        <li class="list-inline-item">
+                          <h5 class="mb-1" style="color:grey">Register for free</h5>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+                        </li>
+                      </ul>
+                                     <!-- Social buttons -->
+                            <ul class="list-unstyled list-inline text-center">
+                              <li class="list-inline-item">
+                                <a class="btn-floating btn-fb mx-1">
+                                    <i style="font-size:25px;color:black;" class="fa fa-facebook-f"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a class="btn-floating btn-tw mx-1">
+                                    <i style="font-size:25px;color:black;" class="fa fa-twitter"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a class="fb-ic">
+                                    <i style="font-size:25px;color:black;" class="fa fa-github"></i>
+                                </a>
+                               </li>
+
+
+                            </ul>
+                            <!-- Social buttons -->
+
+                            <!-- Copyright -->
+                            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                              <a href="#">Competitors Hub</a>
+                            </div>
+                            <!-- Copyright -->
+
+                </div>
+          
+                
+            </div>
+        
+        </div>
+              
+           
+          </footer>
+
 <head>
   <link rel="stylesheet" href="bootstrap.min.css" />
   <link rel="stylesheet" href="./app.css" />
@@ -108,6 +223,7 @@
       <!-- Copyright -->
 
     </footer>
+
     <!-- Footer -->
     <script type="text/javascript">
       window.addEventListener("load", function () {
@@ -122,10 +238,38 @@
 <!--script-->
 
 <script>
-  function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
+
+    function myFunction() {
+        var element = document.body;
+        var mode = document.querySelector(".mode");
+        if(mode.innerHTML=="Light Mode")
+        {mode.innerHTML = "Dark Mode";}
+       else
+        {mode.innerHTML = "Light Mode";}
+        element.classList.toggle("dark-mode");
+    }
+    function smile() {
+      var a;
+      a = document.getElementById("div1");
+      a.innerHTML = "&#xf118;";
+      setTimeout(function () {
+          a.innerHTML = "&#xf11a;";
+        }, 1000);
+      setTimeout(function () {
+          a.innerHTML = "&#xf119;";
+        }, 2000);
+      setTimeout(function () {
+          a.innerHTML = "&#xf11a;";
+        }, 3000);
+    }
+    smile();
+    setInterval(smile, 4000);
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+
+
 
   function smile() {
     var a;
