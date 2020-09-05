@@ -1,3 +1,4 @@
+
 /* Compare page */
 
 
@@ -12,6 +13,7 @@ body.dark-mode {
   color: white;
   background-image: url("Dark_Theme.jpg"); /*Dark_theme background */
 }
+
 .loader{
   position: fixed;
   z-index: 999;
@@ -330,3 +332,10 @@ footer i.fa {
 footer i.fa:hover {
   color:gray;
 }
+
+.col-md-6{
+  display: block;
+  widows: 100%;
+  height: auto;
+}
+
