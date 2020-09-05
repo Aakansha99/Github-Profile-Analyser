@@ -126,12 +126,16 @@
 
       <!-- Page Script -->        
       <script type="text/javascript">
-        function themeToggler() {
-          window.addEventListener("load", function(){
+
+        // Dismiss Loader on Page Load (technically, just hides)
+        window.addEventListener("DOMContentLoaded", function(){
           const loader = document.querySelector(".loader");
-          loader.className += " hidden";
-          });
-  
+          loader.classList.add("hidden"); 
+        });
+        // Setting a max timeout of 6 seconds for loader screen (just in case for a very poor internet connection)
+        setTimeout(()=>document.querySelector(".loader").classList.add("hidden"), 6000);
+
+        function themeToggler() {
           var element = document.body;
           let themeToggle = document.querySelector("#themeToggle a");
           element.classList.toggle("dark-mode");
