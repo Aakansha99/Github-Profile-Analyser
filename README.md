@@ -21,7 +21,7 @@
 
 
 <p align="center">Live Demo: https://aakansha99.github.io/Github-Profile-Analyser/</p>
-<p align="center"><img alt="Custom badge" src="https://img.shields.io/static/v1?label=LIVE%20DEMO&style=for-the-badge&message=https%3A%2F%2Faakansha99.github.io%2FGithub-Profile-Analyser%2F&color=red"></p>
+<p align="center"><a href="https://aakansha99.github.io/Github-Profile-Analyser/"><img alt="Custom badge" src="https://img.shields.io/static/v1?label=LIVE%20DEMO&style=for-the-badge&message=https%3A%2F%2Faakansha99.github.io%2FGithub-Profile-Analyser%2F&color=red"></a></p>
 <h2 align="center">Introduction</h2>
 
 <p align="center">In this application, you can analyze your GitHub profile, compare your profile with some other profile and get a ready-made resume on the basis of your GitHub profile.</p>
