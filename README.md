@@ -19,8 +19,6 @@
   </a>
 </p>
 
-
-<p align="center">Live Demo: https://aakansha99.github.io/Github-Profile-Analyser/</p>
 <p align="center"><a href="https://aakansha99.github.io/Github-Profile-Analyser/"><img alt="Custom badge" src="https://img.shields.io/static/v1?label=LIVE%20DEMO&style=for-the-badge&message=https%3A%2F%2Faakansha99.github.io%2FGithub-Profile-Analyser%2F&color=red"></a></p>
 <h2 align="center">Introduction</h2>
 
