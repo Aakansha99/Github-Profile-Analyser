@@ -1,11 +1,10 @@
 <h1 align= "center"><b>Github-profile-Analyser</b></h1>
 
-![Issues](https://img.shields.io/github/issues/Aakansha99/Github-Profile-Analyser)
-![Pull Requests](https://img.shields.io/github/issues-pr/Aakansha99/Github-Profile-Analyser?)
-![Forks](https://img.shields.io/github/forks/Aakansha99/Github-Profile-Analyser)
-![Stars](https://img.shields.io/github/stars/Aakansha99/Github-Profile-Analyser)
-
-
+![Issues](https://img.shields.io/github/issues/Aakansha99/Github-Profile-Analyser?style=for-the-badge&logo=appveyor)
+![Pull Requests](https://img.shields.io/github/issues-pr/Aakansha99/Github-Profile-Analyser?style=for-the-badge&logo=appveyor)
+![Forks](https://img.shields.io/github/forks/Aakansha99/Github-Profile-Analyser?style=for-the-badge&logo=appveyor)
+![Stars](https://img.shields.io/github/stars/Aakansha99/Github-Profile-Analyser?style=for-the-badge&logo=appveyor)
+![Contributors](https://img.shields.io/github/contributors/Aakansha99/Github-Profile-Analyser?style=for-the-badge&logo=appveyor)
 
 In the recent times, GitHub has evolved from more than being a place to keep a record of all your amazing projects 💻 with their respective source-code. It is now a proof of your commitment, urge to solve problems, not just in the DSA questions in the interviews, but those which you notice around, and come up with software/hardware solutions. Having an amazing GitHub profile 🤩 is one of the aims of every developer today. 
 
