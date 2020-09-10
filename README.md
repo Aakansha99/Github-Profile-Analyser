@@ -17,7 +17,7 @@ Why wait more❓❓ Check it out: ⬇⬇⬇⬇⬇</p>
 
 <p align="center"><img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="Logo" width="300"></p>
 
-<h2>Contributions</h2>
+<h2 align="center">Contributions</h2>
 
 <p align="center">
   Wanna contribute? Yeah, it's open for all✌. <br><br>
