@@ -188,4 +188,11 @@ const username = document.querySelector('#username').value
 git.fetchUsers(username,c,"loading")
 });
 
-
+  function myFunct() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
