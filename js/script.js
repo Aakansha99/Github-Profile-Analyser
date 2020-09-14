@@ -196,3 +196,12 @@ document.querySelector('#user-form1').addEventListener('submit', (e) =>
     const username = document.querySelector('#username1').value
     git.fetchUsers(username,c,"loading1")
 });
+
+  function myFunct() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
