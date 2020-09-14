@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+
    <head>
+
+<head>
+
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,15 +49,31 @@
 </div>
 
 <!-- Navigation bar -->
+
       <div class="topnav">
         <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></i>
+
+
+      <div class="topnav" id="myTopnav">
+        <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></a></i>
+
         <a onclick="myFunction()"><b>THEME</b></a>
         <a href="./gitfind.html"><b>Github Compare</b></a>
         <a href="./analyseProfile.html"><b>Github Profile Analyser</b></a>
         <a class="active" href="./index.html"><b>Home</b></a>
+
      </div>
      <div class="info">
         <h2><i style="font-size:50px;" class="fa fa-github"></i></h2>   
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunct()">
+    	<i class="fa fa-bars"></i></a>
+      </div>
+<!-- Navigation bar end -->
+
+      <div class="info">
+        <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
+
         <h2><b>Github Finder</b></h2> <br>
         <a href="./gitfind.html">
           <h2><b>Github Profile Comparison</b></h2>
@@ -84,12 +104,11 @@
           </div>
           <div class="col-md-6 ">
             <ul class="list-unstyled list-inline text-center py-2">
-
-              <li class="list-inline-item">
-                <h5 class="mb-1" style="color:grey">Register for free</h5>
-              </li>
               <li class="list-inline-item">
                 <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="btn btn-success btn-rounded">Login</a>
               </li>
               <li class="list-inline-item">
                           <a href="#" class="btn btn-success btn-rounded">Login!</a>
@@ -171,6 +190,14 @@
     }
   }
   updateQuote();
+  function myFunct() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
 </body>
 
