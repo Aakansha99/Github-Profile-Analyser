@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://www.riverbendhomestead.com.au/wp-content/uploads/2016/06/cropped-riverbend-homestead-favicon.png"
+    />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+  </head>
 
+  <body class="home">
+    <div class="loader">
+      <img src="splash.gif" />
+    </div>
 
-<head>
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/app.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon"
-    href="https://www.riverbendhomestead.com.au/wp-content/uploads/2016/06/cropped-riverbend-homestead-favicon.png">
-  <link rel="stylesheet" href="css/background.css">
-  <meta name="viewport" content="width=device-width"/>
-  <title>
-    Home
-  </title>
-</head>
+    <!-- Background boxes section -->
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- Background boxes section end end -->
 
-<body class="home">
+    <!-- Navigation bar 2 -->
+    <!-- <body class="hero-anime">	 -->
 
-  <div class="loader">
-    <img src="splash.gif" />
-  </div>
+    <div
+      class="navigation-wrap bg-light start-header start-style"
+      id="myTopnav"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a class="navbar-brand" href="index.html" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
 
-  <!-- Background boxes section -->
-<div class="box">
-  <div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-<div>
-</div>
-</div>
-<!-- Background boxes section end end -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-<!-- Navigation bar -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link active" href="#">Home</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="#">Github Profile Analyser</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="#">Github Compare</a>
+                  </li>
+                  <li class="pl-4 pl-md-0 ml-0 ml-md-4">
+                    <div class="custom-control custom-switch">
+                      <a class="nav-link">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="darkSwitch"
+                          onclick="myFunction()"
+                        />
+                        <label for="darkSwitch" class="custom-control-label">
+                          Dark Mode
+                        </label>
+                      </a>
+                    </div>
+                    <!-- <script src="dark-mode-switch.min.js"></script> -->
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation bar 2 end -->
 
-      <div class="topnav" id="myTopnav">
+    <!-- Navigation bar -->
+    <!-- <div class="topnav" id="myTopnav">
         <i style="font-size:25px;font-size: 40px;padding-left: 15px;padding-top: 7px;" class="fa fa-github"></a></i>
         <a onclick="myFunction()"><b>THEME</b></a>
         <a href="./gitfind.html"><b>Github Compare</b></a>
@@ -56,45 +109,52 @@
         <a class="active" href="./index.html"><b>Home</b></a>
         <a href="javascript:void(0);" class="icon" onclick="myFunct()">
     	<i class="fa fa-bars"></i></a>
-      </div>
-<!-- Navigation bar end -->
+      </div> -->
+    <!-- Navigation bar end -->
 
-      <div class="info">
-        <h2><i style="font-size:90px;" class="fa fa-github"></i></h2>
-        <h2><b>Github Finder</b></h2> <br>
-        <a href="./gitfind.html">
-          <h2><b>Github Profile Comparison</b></h2>
-        </a></br>
-        <a href="./analyseProfile.html">
-          <h2><b>Analyse a Profile</b></h2>
-        </a></br></br>
-        <p class="text">"Think Twice, Code Once"</p>
-        </br>
-        <div id="div1" class="fa"></div>
-      </div>
+    <div class="info" style="margin-top: 100px">
+      <h2><i style="font-size: 90px" class="fa fa-github"></i></h2>
+      <h2><b>Github Finder</b></h2>
+      <br />
+      <a href="./gitfind.html">
+        <h2><b>Github Profile Comparison</b></h2>
+      </a>
+      <br />
+      <a href="./analyseProfile.html">
+        <h2><b>Analyse a Profile</b></h2> </a
+      ><br /><br />
+      <p class="text">"Think Twice, Code Once"</p>
+      <br />
+      <div id="div1" class="fa"></div>
     </div>
-
+    <!-- </div> -->
 
     <!--Footer-->
-    <footer class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white" id="footer"
-      style="margin-top:95px">
-
+    <footer
+      class="page-footer font-small stylish-color-dark pt-4 bg-dark text-white"
+      id="footer"
+      style="margin-top: 95px"
+    >
       <!-- Footer Links -->
       <div class="container text-center text-md-left">
-
         <!-- Grid row -->
         <div class="row">
-
           <!-- Grid column -->
-          <div class="col-md-6  ">
-
+          <div class="col-md-6">
             <!-- Content -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 " style="color:darkgray">Git-Hub Profile Analyser</h5>
-            <p style="color:lavender">Git-Hub Profile Analyser is an application that can analyze your GitHub profile,
-              compare your profile
-              with some other profile and get a ready-made resume on the basis of your GitHub profile.</p>
+            <h5
+              class="font-weight-bold text-uppercase mt-3 mb-4"
+              style="color: darkgray"
+            >
+              Git-Hub Profile Analyser
+            </h5>
+            <p style="color: lavender">
+              Git-Hub Profile Analyser is an application that can analyze your
+              GitHub profile, compare your profile with some other profile and
+              get a ready-made resume on the basis of your GitHub profile.
+            </p>
           </div>
-          <div class="col-md-6 ">
+          <div class="col-md-6">
             <ul class="list-unstyled list-inline text-center py-2">
               <li class="list-inline-item">
                 <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
@@ -104,41 +164,39 @@
               </li>
             </ul>
           </div>
-
-
         </div>
-
       </div>
-      <hr>
+      <hr />
 
       <!-- Social buttons -->
       <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
           <a class="btn-floating btn-fb mx-1">
-            <i style="font-size:50px;color:black;" class="fa fa-facebook-f"></i>
+            <i
+              style="font-size: 50px; color: black"
+              class="fa fa-facebook-f"
+            ></i>
           </a>
         </li>
         <li class="list-inline-item">
           <a class="btn-floating btn-tw mx-1">
-            <i style="font-size:50px;color:black;" class="fa fa-twitter"></i>
+            <i style="font-size: 50px; color: black" class="fa fa-twitter"></i>
           </a>
         </li>
         <li class="list-inline-item">
           <a class="fb-ic">
-            <i style="font-size:50px;color:black;" class="fa fa-github"></i>
+            <i style="font-size: 50px; color: black" class="fa fa-github"></i>
           </a>
         </li>
-
-
       </ul>
       <!-- Social buttons -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
         <a href="#">GitHub Profile Analyser</a>
       </div>
       <!-- Copyright -->
-
     </footer>
     <!-- Footer -->
     <script type="text/javascript">
@@ -147,58 +205,58 @@
         loader.className += " hidden";
       });
     </script>
+    <script src="./js/navigation.js"></script>
+  </body>
 
-</body>
+  <!--script-->
 
-
-<!--script-->
-
-<script>
-  function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
-
-  function smile() {
-    var a;
-    a = document.getElementById("div1");
-    a.innerHTML = "&#xf118;";
-    setTimeout(function () {
-      a.innerHTML = "&#xf11a;";
-    }, 1000);
-    setTimeout(function () {
-      a.innerHTML = "&#xf119;";
-    }, 2000);
-    setTimeout(function () {
-      a.innerHTML = "&#xf11a;";
-    }, 3000);
-  }
-  smile();
-  setInterval(smile, 4000);
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  let quote = document.querySelector(".text");
-
-  async function updateQuote() {
-    while (true) {
-      await sleep(5000);
-      let obj = await fetch("https://programming-quotes-api.herokuapp.com/quotes/random");
-      let data = await obj.json();
-      quote.textContent = '"' + data['en'] + '"';
+  <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
     }
-  }
-  updateQuote();
-  function myFunct() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
 
+    function smile() {
+      var a;
+      a = document.getElementById("div1");
+      a.innerHTML = "&#xf118;";
+      setTimeout(function () {
+        a.innerHTML = "&#xf11a;";
+      }, 1000);
+      setTimeout(function () {
+        a.innerHTML = "&#xf119;";
+      }, 2000);
+      setTimeout(function () {
+        a.innerHTML = "&#xf11a;";
+      }, 3000);
+    }
+    smile();
+    setInterval(smile, 4000);
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    let quote = document.querySelector(".text");
+
+    async function updateQuote() {
+      while (true) {
+        await sleep(5000);
+        let obj = await fetch(
+          "https://programming-quotes-api.herokuapp.com/quotes/random"
+        );
+        let data = await obj.json();
+        quote.textContent = '"' + data["en"] + '"';
+      }
+    }
+    updateQuote();
+    function myFunct() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </html>

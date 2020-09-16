@@ -1,6 +1,6 @@
 @font-face {
   font-family: Kaushan;
-  src: url(fonts/KaushanScript-Regular.otf);
+  src: url(../fonts/KaushanScript-Regular.otf);
 }
 
 /* Background boxes */
@@ -127,7 +127,7 @@ div.info > a {
   transition: 0.5s all;
 }
 
-div .info a:hover {
+div.info a:hover {
   text-decoration: none;
   color: rgb(226, 205, 205);
 }
