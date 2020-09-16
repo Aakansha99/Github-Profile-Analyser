@@ -213,7 +213,7 @@ div.info a:hover {
   transition: 0.5s all;
 }
 
-.dark-mode div .info a:hover {
+.dark-mode div.info a:hover {
   text-decoration: none;
   color: lightblue;
 }
