@@ -350,6 +350,9 @@ body {
   }
 }
 
+::placeholder{
+  text-align: center;
+}
 
 .git{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
