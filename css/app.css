@@ -145,7 +145,7 @@ td{
 
 .info{
   text-align: center;
-  margin-top: 15px;
+  margin-top: 60px;
 }
 
 .info b,h3{
@@ -167,7 +167,7 @@ td{
 
 .footer{
   text-align: center;
-  margin-top: 0px;
+  margin-top: 141px;
 }
 
 .footer p{
@@ -350,6 +350,9 @@ body {
   }
 }
 
+::placeholder{
+  text-align: center;
+}
 
 .git{
   /* background: url(./coffee-apple.jpg) no-repeat fixed; */
@@ -462,7 +465,7 @@ td{
 
 .info{
   text-align: center;
-  margin-top: 15px;
+  margin-top: 60px;
 }
 
 .info b,h3{
@@ -484,7 +487,7 @@ td{
 
 .footer{
   text-align: center;
-  margin-top: 0px;
+  margin-top: 141px;
 }
 
 .footer p{
