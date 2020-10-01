@@ -1,6 +1,4 @@
-
 /* Compare page */
-
 
 body {
   background-color: white;
@@ -15,9 +13,7 @@ body {
 }
 
 .git{
-  /* background: url(./coffee-apple.jpg) no-repeat fixed; */
   font-family: Arial;
-  /* height: 100vh; */
 }
 
 .split {
@@ -25,7 +21,6 @@ body {
   width: 45%;
   position: fixed;
   z-index: 1;
-  /* top: 0; */
   overflow-x: hidden;
   padding-top: 20px;
   margin: 3vw;
@@ -86,53 +81,6 @@ td{
   text-align: center;
   color: aliceblue;
   margin-top: 544px;
-}
-
-/* Nav Bar */
-
-.topnav {
-  overflow: hidden;
-}
-
-.topnav a {
-  float: right;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.topnav a:hover {
-  color: lightgray;
-}
-
-.topnav a.active {
-  color: steelblue;
-}
-.topnav .icon {
-  display: none;
-}
-@media screen and (max-width: 640px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
 }
 
 /* Home page */
@@ -304,7 +252,7 @@ td{
   
 
 }
-=======
+/* ======= */
 /* Compare page */
 
 
@@ -430,29 +378,6 @@ td{
   text-align: center;
   color: aliceblue;
   margin-top: 544px;
-}
-
-/* Nav Bar */
-
-.topnav {
-  overflow: hidden;
-}
-
-.topnav a {
-  float: right;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.topnav a:hover {
-  color: lightgray;
-}
-
-.topnav a.active {
-  color: steelblue;
 }
 
 /* Home page */
@@ -616,4 +541,3 @@ td{
     transform: rotate(360deg);
   }
 }
-
