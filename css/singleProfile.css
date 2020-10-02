@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+    color: black;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    background: linear-gradient(to right, #141e30, #243b55); 
+}  
+
+.autocomplete {
+    width: auto;
+    background: #0A79DF;
+    text-align: center;
+    margin-top: 8px;
+    box-shadow: 0px 1px 5px 1px #000;
+    padding: 0.1rem;
+}
+  
+.autocomplete:hover {
+    background:  rgba(255, 0, 170, 0.2);
+    overflow: hidden;
+    padding: 0.1rem;
+}
+  
+#match-list{
+    margin: auto;
+    padding: auto;
+    width: 30%;
+    display: inline;
+}
+
+h2{
+    margin-top: 10px;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+}
+
+.img{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border: green 2px solid;
+}
+
+.form-control{
+    display: inline;
+    border-radius: 25px;
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+}
+
+.btn{
+    border-radius: 5px;
+    width: 100px;
+}
+
+#match-list {
+    margin-bottom: 10px;
+}
+
+.item {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.pro{
+    height: 1000px;
+}
+
+#profile {
+    display: flex;
+    background-color: rgb(255, 250, 250, 0.4);    
+    overflow: auto;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    height: auto;
+    border-radius: 20px;
+}
+
+#profile_pic {
+    display: inline-block;
+    margin: 20px 0 0 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    border: 1px solid grey;
+    box-shadow: steelblue 3px 3px;
+}
+
+#profile_name {
+    font-size: 40px;
+    width: auto;
+    height: auto;
+    color: hsla(250, 90%, 60%, 0.6);
+    margin: 20px 0 0 10px;
+}
+#profile_bio{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#profile_location{
+    width: 200px;
+}
+
+canvas {
+    display: contents;
+    background-color: rgba(255, 100, 170, 0.3);
+    width: 500px;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 0;
+}
+
+@media (max-width: 516px){
+    canvas {
+        background-color: rgba(255, 100, 170, 0.3);
+        height: 100px;
+        width: 90px;
+    }
+}

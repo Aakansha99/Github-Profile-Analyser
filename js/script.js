@@ -76,35 +76,40 @@ class finder
                     <img src="${data.avatar_url}" alt="" id = "profile-pic">
                 </div>
                 <tr>
-                    <td style="color:chocolate";><b>Name :</b> ${data.name}</td>
+                <td style="color:chocolate;"><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>Location :</b> ${data.location} </td>
+                    <td style="color:chocolate;"><b>About:</b> ${data.bio} </td>
+                </tr>
+                ${ (data.blog)?`<tr><td><a style="color:chocolate;" href="${data.blog}" href="_blank"><b>Custom Site:</b> ${data.blog} </td></tr>`:"" }
+
+                <tr>
+                    <td style="color:chocolate;"><b>Location :</b> ${data.location} </td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>Followers :</b> ${data.followers}</td>
+                    <td style="color:chocolate;"><a href="${data.html_url}?tab=followers"><b>Followers :</b> ${data.followers}</a></td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>Following :</b> ${data.following}</td>
+                    <td style="color:chocolate;"><a href="${data.html_url}?tab=following"><b>Following :</b> ${data.following}</a></td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>Total Repositories :</b> ${data.public_repos}</td>
+                    <td style="color:chocolate;"><a href="${data.html_url}?tab=repositories"><b>Total Repositories :</b> ${data.public_repos}</a></td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>Total Stars :</b> ${stars}</td>
+                    <td style="color:chocolate;"><a href="${data.html_url}?tab=stars"><b>Total Stars :</b> ${stars}</a></td>
                 </tr>
 
                 <tr>
-                    <td style="color:chocolate";><b>GitHub Grade :</b> ${Grade}</td>
+                    <td style="color:chocolate;"><b>GitHub Grade :</b> ${Grade}</td>
                 </tr
 
                 <tr>
-                    <td style="color:chocolate";><b>Github Url :</b> <a href="${data.html_url}" target="_blank">${data.html_url}</a></td> <!--added target="_blank"-->
+                    <td style="color:chocolate;"><b>Github Url :</b> <a href="${data.html_url}" target="_blank">${data.html_url}</a></td> <!--added target="_blank"-->
                 </tr>
                 </div>
             `;
