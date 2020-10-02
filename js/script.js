@@ -76,14 +76,13 @@ class finder
                     <img src="${data.avatar_url}" alt="" id = "profile-pic">
                 </div>
                 <tr>
-                    <td style="color:chocolate;"><b>Name :</b> ${data.name}</td>
+                <td style="color:chocolate;"><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
                     <td style="color:chocolate;"><b>About:</b> ${data.bio} </td>
                 </tr>
-
-                ${ (data.blog)?`<tr><td><a style="color:chocolate" href="${data.blog}" href="_blank"><b>Custom Site:</b> ${data.blog} </td></tr>`:"" }
+                ${ (data.blog)?`<tr><td><a style="color:chocolate;" href="${data.blog}" href="_blank"><b>Custom Site:</b> ${data.blog} </td></tr>`:"" }
 
                 <tr>
                     <td style="color:chocolate;"><b>Location :</b> ${data.location} </td>

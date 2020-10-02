@@ -1,203 +1,175 @@
 function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
 
-function Grading(points)
-{
-    if (points < 2)
-    {
-      Grade="A";      
-    } 
-    else if (points < 4) 
-    {
-            Grade="A+"; 
-    } 
-    else if (points < 6) 
-    {
-            Grade="A++"; 
-    } 
-    else if (points < 8) 
-    {
-            Grade="S" 
-    } 
-    else if (points < 10) 
-    {
-            Grade="S+";
-    }
-return Grade;
-}    
-
-class finder
-{
-async fetchUsers(user,c,load)
-    {
-        let loader = `<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`;
-        document.getElementById(load).innerHTML = loader;
-        const profile = await fetch(`https://api.github.com/users/${user}`)
-        const data = await profile.json() ;
-        
-        document.getElementById(load).innerHTML = "";
-        if(data.message)
-            {
-                document.getElementById(load).innerHTML = `<br/><b style="color: red;">User Not Found</b>`;
-            }
-        else
-            {
-                const repositories = await fetch(data.repos_url);
-                const repos = await repositories.json();
-                
-                if (data) 
-                    {
-                        this.deletedata(c)
-                        this.addUserToList(data,repos,c)
-                    }
-            }
-    }
-
-addUserToList(data,repos,c)
-    {
-        const list = document.querySelector(c);
-        const table = document.createElement('table');
-        table.className="table border table-striped mt-5";
-        let stars = 0
-        // defining user points on the scale of 10 //
-        var points=(((data.public_repos+stars)/2)/50)*10
-        var Grade = Grading(points)
-
-        for( var i = 0;i<repos.length;i+=1)
-            {
-                stars += repos[i].watchers_count
-            }
-        
-    table.innerHTML = `
-            <div id="class">
-            <div class="user-image">
-                <img src="${data.avatar_url}" alt="" id = "profile-pic">
-            </div>
-            
-            <tr>
-                <td style="color:chocolate;"><b>Name :</b> ${data.name}</td>
-            </tr>
-
-            <tr><td style="color:chocolate;"><b>About:</b> ${data.bio} </td></tr>
-
-            ${ (data.blog)?`<tr><td><a style="color:chocolate" href="${data.blog}" href="_blank"><b>Custom Site:</b> ${data.blog} </td></tr>`:"" }
-
-            <tr>
-                <td style="color:chocolate;"><b>Location :</b> ${data.location} </td>
-            </tr>
-
-            <tr>
-                <td style="color:chocolate;"><a href="${data.html_url}?tab=followers" target="_blank"><b>Followers :</b> ${data.followers}</a></td>
-            </tr>
-
-            <tr>
-                <td style="color:chocolate;"><a href="${data.html_url}?tab=following" target="_blank"><b>Following :</b> ${data.following}</a></td>
-            </tr>
-
-            <tr>
-                <td style="color:chocolate;"><a href="${data.html_url}?tab=repositories" target="_blank"><b>Total Repositories :</b> ${data.public_repos}</a></td>
-            </tr>
-
-            <tr>
-                <td style="color:chocolate;"><a href="${data.html_url}?tab=stars" target="_blank"><b>Total Stars :</b> ${stars}</a></td>
-            </tr>
-
-            <tr>
-                <td style="color:chocolate;"><b>GitHub Grade :</b> ${Grade}</td>
-            </tr
-
-            <tr>
-                <td style="color:chocolate;"><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
-            </tr>
-            </div>
-`;
-
-        list.appendChild(table);
-    }
-
-deletedata(c)
-    {
-        var e = document.querySelector(c); 
-        var child = e.lastElementChild;  
-        e.removeChild(child)
-    }
+function Grading(points) {
+  if (points < 2) {
+    Grade = "A";
+  } else if (points < 4) {
+    Grade = "A+";
+  } else if (points < 6) {
+    Grade = "A++";
+  } else if (points < 8) {
+    Grade = "S";
+  } else if (points < 10) {
+    Grade = "S+";
+  }
+  return Grade;
 }
 
-const debounce = (func,delay) => {
-let timer;
-return function(...args){
-if(timer){
-  clearTimeout(timer);
-}
-timer = setTimeout( () => {
-    func(...args)
-  },delay)
-} }
 
-const search = document.getElementById('username');
-//const search1 = document.getElementById('username1');
+function getGraph(){
+  var ctx = document.getElementById('chart').getContext("2d");
+
+var chart = new Chart(ctx, {
+  type: "pie",
+  data: {
+    labels: ["Python", "JavaScript", "HTML", "CSS5", "C++"],
+    datasets: [
+      {
+        label: "Languages You Know",
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: ["red", "steelblue", "pink", "orange", "green"],
+        data: [10, 20, 15, 19, 5],
+      },
+    ],
+  },
+  options: {
+    responsive: false,
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "black",
+        boxWidth: 20,
+      }
+    }
+  },
+});
+}
+
+class finder {
+  async fetchUsers(user, profileDiv, load) {
+    const profile = await fetch(`https://api.github.com/users/${user}`);
+    const data = await profile.json();
+    console.log(data);
+    document.getElementById(load).innerHTML = "";
+
+    if (data.message) {
+      profileDiv.innerHTML = `<br/><b style="color: red; font-size: 20px;">User Not Found</b>`;
+    } else {
+      const repositories = await fetch(data.repos_url);
+      const repos = await repositories.json();
+
+      profileDiv.innerHTML = "";
+
+      if (data) {
+        this.addUserToList(data, repos, profileDiv);
+      }else{
+        profileDiv.innerHTML = `<br/><b style="color: red; font-size: 20px;">No Data To Display</b>`;
+      }
+    }
+  }
+
+  addUserToList(data, repos,profileDiv) {
+
+    let stars = 0;
+
+    // defining user points on the scale of 10 //
+    var points = ((data.public_repos + stars) / 2 / 50) * 10;
+    var Grade = Grading(points);
+
+    for (var i = 0; i < repos.length; i += 1) {
+      stars += repos[i].watchers_count;
+    }
+    let profile_pic = `<img id = 'profile_pic' src = ${data.avatar_url}>`;
+    let profile_name = `<div id = 'profile_name'><i><u>Name:</u></i> ${data.name}</div>`
+    let profile_bio = `<div id = 'profile_bio'>~${data.bio}</div>`;
+    let profile_location = `<div id = 'profile_location' class = 'item'><i><u>from</u>:</i> ${data.location}</div>`
+    let profile_followers = `<div id = 'profile_followers' class = 'item'><i><u>followers</u>:</i> ${data.followers}</div>`
+    let profile_following = `<div id = 'profile_following' class = 'item'><i><u>following</u>:</i> ${data.following}</div>`
+    let profile_public_repos = `<div id = 'profile_public_repos' class = 'item'><i><u>Public Repos</u>:</i> ${data.public_repos}</div>`
+    let profile_stars = `<div id = 'profile_stars' class = 'item'><i><u>Total Stars</u>:</i> ${stars}</div>`
+    let profile_Grade = `<div id = 'profile_Grade' class = 'item'><i><u>Grade</u>:</i> ${Grade}</div>`
+    let profile_URL = `<div id = 'profile_URL' class = 'item'><a href="${data.html_url}" target="_blank">${data.html_url}</a></div>`
+
+    profileDiv.insertAdjacentHTML('beforeend', profile_pic);
+    profileDiv.insertAdjacentHTML('beforeend', profile_name);
+    if(data.bio)profileDiv.insertAdjacentHTML('beforeend', profile_bio);
+    if(data.location)profileDiv.insertAdjacentHTML('beforeend', profile_location);
+    profileDiv.insertAdjacentHTML('beforeend', profile_followers);
+    profileDiv.insertAdjacentHTML('beforeend', profile_following);
+    profileDiv.insertAdjacentHTML('beforeend', profile_public_repos);
+    profileDiv.insertAdjacentHTML('beforeend', profile_stars);
+    profileDiv.insertAdjacentHTML('beforeend', profile_Grade);
+    profileDiv.insertAdjacentHTML('beforeend', profile_URL);
+    getGraph();
+}
+}
+
+const debounce = (func, delay) => {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+var search = document.getElementById("username");
 let users;
 
-// FIlter states
-async function searchUser(searchText,id,search,clear){
-const matchList = document.getElementById(id);
-if(searchText !== "")
-{
-    const res =  await fetch(`https://api.github.com/search/users?q=${searchText}`);
-    users = await res.json();
-    if(users.total_count === 0)
-    {
-        matchList.innerHTML = ""
-    }
-    else
-    {
-        let matches;
-        matches = users.items.filter(user => {
-        const regex = new RegExp(`^${searchText}`, 'gi');
-        return user.login.match(regex);
-        });
 
-        const html = matches.slice(0,6).map(match => `<div class="autocomplete">
-        <p style="padding-top: 15px;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
-        </div>`).join('');
-        matchList.innerHTML = html;
-        matchList.addEventListener('click', (e) => {
+// FIlter states
+async function searchUser(searchText, id, search) {
+  const matchList = document.getElementById(id);
+  if (searchText !== "") {
+    const res = await fetch(
+      `https://api.github.com/search/users?q=${searchText}`
+    );
+    users = await res.json();
+    if (users.total_count === 0) {
+      matchList.innerHTML = "";
+    } else {
+      let matches;
+      matches = users.items.filter((user) => {
+        const regex = new RegExp(`^${searchText}`, "gi");
+        return user.login.match(regex);
+      });
+
+      const html = matches
+        .slice(0, 5)
+        .map(
+          (match) => `<div class="autocomplete">
+        <p style="padding-top: 15px;font-weight:600"><img class="img" src=${match.avatar_url}/> ${match.login}</p>
+        </div>`
+        )
+        .join("");
+      matchList.innerHTML = html;
+      matchList.addEventListener("click", (e) => {
         search.value = e.target.textContent.trim();
         matchList.style.display = "none";
-        matchList.innerHTML = ""
-        })
-        matchList.style.display = "block";
+        matchList.innerHTML = "";
+      });
+      matchList.style.display = "block";
     }
-}
-else
-{
-    matchList.innerHTML = ""   
-}
-document.getElementById(clear).addEventListener('click', () => {
-    matchList.innerHTML = ""
-    }) 
+  } else {
+    matchList.innerHTML = "";
+  }
 }
 
-search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),600));
-//search1.addEventListener('input', debounce( () => searchUser(search1.value,"match-list1",search1,"clear1"),600));
+search.addEventListener(
+  "input",
+  debounce(() => searchUser(search.value, "match-list", search), 600)
+);
 
 const git = new finder();
 
-document.querySelector('#user-form').addEventListener('submit', (e) =>
-{
-e.preventDefault();
-const c = '#user-form'
-const username = document.querySelector('#username').value
-git.fetchUsers(username,c,"loading")
+document.querySelector("#user-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const profileDiv = document.getElementById("profile");
+  const username = document.querySelector("#username").value;
+  git.fetchUsers(username, profileDiv, "loading");
 });
-
-  function myFunct() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
