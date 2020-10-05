@@ -7,7 +7,7 @@
 .box div {
   height: 60px;
   width: 60px;
-  position: absolute;
+  position: fixed;
   top: 10%;
   left: 10%;
   animation: animate 4s linear infinite;

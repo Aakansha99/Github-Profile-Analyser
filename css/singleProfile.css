@@ -9,7 +9,6 @@ body {
     background-color: white;
     background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
     color: black;
-    background-repeat: no-repeat;
     width: 100%;
     height: auto;
     margin-bottom: 50px;
@@ -85,7 +84,6 @@ h2{
     padding: 10px;
 }
 
-
 .pro{
     height: 1000px;
 }
@@ -128,19 +126,9 @@ h2{
 }
 
 canvas {
-    display: contents;
     background-color: rgba(255, 100, 170, 0.3);
-    width: 500px;
-    height: 400px;
+    display: contents;
     margin-top: 20px;
     border-radius: 20px;
     padding: 0;
-}
-
-@media (max-width: 516px){
-    canvas {
-        background-color: rgba(255, 100, 170, 0.3);
-        height: 100px;
-        width: 90px;
-    }
 }
