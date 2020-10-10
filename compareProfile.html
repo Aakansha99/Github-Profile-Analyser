@@ -8,16 +8,75 @@
     <link rel="icon" href="https://freepngimg.com/download/github/3-2-github-png-image.png">
     <link rel="stylesheet" href="./css/navbar.css" />
     <meta name="viewport" content="width=device-width" />
-    
+
     <title>Github Compare</title>
 </head>
 
 <body class="git">
+  <div
+      class="navigation-wrap bg-light start-header start-style not-sticky"
+      id="myTopnav"
+  >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <i class="fa fa-github"></i>
+          </a>
 
-    <!-- Navigation bar-->
-    <div id="nav-placeholder"></div>
-    <!-- Navigation bar end -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="./singleProfile.html"
+                  >Github Profile Analyser</a
+                >
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="./compareProfile.html">Github Compare</a>
+              </li>
+              <li class="pl-4 pl-md-0 ml-0 ml-md-4">
+                <div class="custom-control custom-switch">
+                  <a class="nav-link">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="darkSwitch"
+                      onclick="myFunction()"
+                    />
+                    <label
+                      for="darkSwitch"
+                      class="custom-control-label"
+                      id="dark-mode-text"
+                    >
+                      Dark Mode
+                    </label>
+                  </a>
+                </div>
+                <!-- <script src="dark-mode-switch.min.js"></script> -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  </div>
     <h2 style="font-weight:600;text-align: center;margin-top: 40px;"><i class="fa fa-search"
             style="font-size:28px;"></i> Find and Compare</h2>
 
