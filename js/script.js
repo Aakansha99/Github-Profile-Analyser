@@ -7,26 +7,26 @@
     {
         if (points < 2)
         {
-          Grade="A";      
-        } 
-        else if (points < 4) 
+          Grade="A";
+        }
+        else if (points < 4)
         {
-                Grade="A+"; 
-        } 
-        else if (points < 6) 
+                Grade="A+";
+        }
+        else if (points < 6)
         {
-                Grade="A++"; 
-        } 
-        else if (points < 8) 
+                Grade="A++";
+        }
+        else if (points < 8)
         {
-                Grade="S" 
-        } 
-        else if (points < 10) 
+                Grade="S"
+        }
+        else if (points < 10)
         {
                 Grade="S+";
         }
     return Grade;
-    }    
+    }
 
 class finder
 {
@@ -36,7 +36,7 @@ class finder
             document.getElementById(load).innerHTML = loader;
             const profile = await fetch(`https://api.github.com/users/${user}`)
             const data = await profile.json() ;
-            
+
             document.getElementById(load).innerHTML = "";
             if(data.message)
                 {
@@ -46,8 +46,8 @@ class finder
                 {
                     const repositories = await fetch(data.repos_url);
                     const repos = await repositories.json();
-                    
-                    if (data) 
+
+                    if (data)
                         {
                             this.deletedata(c)
                             this.addUserToList(data,repos,c)
@@ -69,7 +69,7 @@ class finder
                 {
                     stars += repos[i].watchers_count
                 }
-            
+
         table.innerHTML = `
                 <div id="class">
                 <div class="user-image">
@@ -119,8 +119,8 @@ class finder
 
     deletedata(c)
         {
-            var e = document.querySelector(c); 
-            var child = e.lastElementChild;  
+            var e = document.querySelector(c);
+            var child = e.lastElementChild;
             e.removeChild(child)
         }
 }
@@ -173,11 +173,11 @@ async function searchUser(searchText,id,search,clear){
     }
     else
     {
-        matchList.innerHTML = ""   
+        matchList.innerHTML = ""
     }
     document.getElementById(clear).addEventListener('click', () => {
         matchList.innerHTML = ""
-        }) 
+        })
 }
 
 search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),600));
