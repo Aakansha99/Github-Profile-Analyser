@@ -11,7 +11,7 @@
 <br>
 This application helps you to work on it. In this application, you can analyze your GitHub profile with a GitHub grade, compare your profile with some amazing people out there, and also your fellow developer friends and get a ready-made resume on the basis of your GitHub profile. 
 <br>
-Why wait more❓❓ Check it out now: ⬇⬇⬇⬇⬇</p>
+Why wait more❓❓ Check it out: ⬇⬇⬇⬇⬇</p>
 
 <p  align="center"><a href="https://aakansha99.github.io/Github-Profile-Analyser/"><img alt="Custom badge" src="https://img.shields.io/static/v1?label=LIVE%20DEMO&style=for-the-badge&message=https%3A%2F%2Faakansha99.github.io%2FGithub-Profile-Analyser%2F&color=red"></a></p>
 
